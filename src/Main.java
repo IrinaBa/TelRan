@@ -9,7 +9,7 @@ public class Main {
         List<String> stringList = new ArrayList<>();
         stringList.add("I");
         stringList.add("do");
-        stringList.add("my");
+        stringList.add("mykdkdkdk");
         stringList.add("homeworkkkkkkkk");
         System.out.println(stringList);
         System.out.println(toOneString(stringList));
