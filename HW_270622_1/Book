@@ -1,0 +1,23 @@
+public class Book extends Author  {
+    private String title;
+    private Author author;
+
+    public Book(String title, Author author) {
+        super(author.getfName(), author.getlName());
+        this.title = title;
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    @Override
+    public String toString() {
+        return "Book: " + title  +", author=" + author;
+    }
+}
