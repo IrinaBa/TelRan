@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Main {
+    //Дан лист Вook{String title, Author author}.
+    //Естественно, один автор Author{firstName, lastName} может быть автором нескольких книг.
+    //Необходимо получить список всех авторов.
+    public static void main(String[] args) {
+        Author a1 = new Author("Aleksandr", "Puschkin");
+        Author a2 = new Author("Stiven", "King");
+        Author a3 = new Author("Taras", "Schevchenko");
+        Author a4 = new Author("Janusch", "Vischnevskiy");
+
+        Book b1 = new Book("Ryslan i Lydmila", a1);
+        Book b2 = new Book("Es", a2);
+        Book b3 = new Book("Kobzar", a3);
+
+        Book b4 = new Book("Odinochestvo v seti", a4);
+        Book b5 = new Book("Carry", a2);
+
+        List<Book> bookList = new ArrayList<>();
+        bookList.add(b1);
+        bookList.add(b2);
+        bookList.add(b3);
+        bookList.add(b4);
+        bookList.add(b5);
+
+
+        System.out.println(bookList);
+        System.out.println(task1(bookList));
+    }
+
+    public static Set<Author> task1(List<Book> books) {
+        Set<Author> authorSet = new HashSet<>();
+        for (Book b : books) {
+            authorSet.add(b.getAuthor());
+
+        }
+        return authorSet;
+
+    }
+}
